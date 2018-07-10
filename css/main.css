@@ -1,0 +1,46 @@
+/*adding margin to the new tasks*/
+label,
+.checkbox {
+	margin: 10px;
+	max-width: 390px;
+}
+.checkbox {
+	width: 20px!important;
+}
+/*Changing the size of the input*/
+input {
+	width: 280px!important;
+	margin: 20px auto;
+}
+/*changing the ordered list to look better*/
+ul {
+	width: 90%;
+	max-width: 500px;
+	margin: auto;
+	list-style-type: none;
+	padding: 0px;
+}
+li {
+	text-align: left;
+	font-family: 'Special Elite', cursive;
+	text-shadow: 3px 2px 2px grey;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+/*algining the button to the right*/
+.btn-dark {
+	float: right;
+}
+/*adding a new font to the h1 tag*/
+h1 {
+	font-family: 'Marck Script', cursive;
+	font-weight: bold;
+	font-size: 50px;
+	text-shadow: 3px 2px 2px grey;
+}
+/*adding a background to the body*/
+body {
+	background-image: url("../img/collegeRuled.jpg");
+	background-size: auto;
+}

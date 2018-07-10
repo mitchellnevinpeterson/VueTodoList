@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!-- Character set -->
+    <meta charset="utf-8">
+    <!-- Responsive Web Page Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title></title>
+    <!-- Boot Strap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Animate Stylesheet -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Custom Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    
+  </head>
+  <body>
+    <div id="todo">
+        <section class="text-center">
+            <h1>Make your list and get it done!</h1>
+            <input 
+                v-model="newTask" 
+                v-on:keyup.enter="addTask" 
+                type="text" 
+                placeholder="What do you need to do?"
+                class="form-control text-center">
+                <button 
+                    v-model="todoList"
+                    class="btn btn-danger" 
+                    type="button" 
+                    v-on:click="clearAll">Clear All</button>
+        </section>
+        <!-- <p>{{ newTask }}</p> -->
+        <ul>
+            <li v-for="task in todoList">
+                <input class="checkbox" type="checkbox">
+                <label>{{ task }}</label>
+                <button 
+                    class="btn btn-dark" 
+                    type="button" 
+                    v-on:click="removeTask(task)">X</button>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Popper Bootstrap Java Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- Bootstrap Java Script -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- VueJS -->
+    <script src=" https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- Custom Java Script -->
+    <script src="js/main.js" type="text/javascript"></script>
+  </body>
+</html>
